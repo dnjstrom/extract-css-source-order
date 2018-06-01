@@ -1,0 +1,24 @@
+{
+  "name": "extract-css-source-order",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf dist/**/*",
+    "build": "rollup -c",
+    "postbuild": "cp ./src/html/* ./dist/",
+    "prestart": "yarn && yarn build && opn http://0.0.0.0:8765",
+    "start": "http-server -p 8765 ./dist/",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "gh-pages": "^1.2.0",
+    "http-server": "^0.11.1",
+    "marked": "^0.4.0",
+    "opn-cli": "^3.1.0",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.59.4",
+    "rollup-plugin-postcss": "^1.6.2"
+  }
+}
