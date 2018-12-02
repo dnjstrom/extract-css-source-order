@@ -4,7 +4,7 @@ export default [
   {
     input: "./src/index.js",
     output: {
-      file: "dist/extract.js",
+      file: "docs/extract.js",
       format: "es"
     },
     plugins: [
@@ -17,7 +17,7 @@ export default [
   {
     input: "./src/index.js",
     output: {
-      file: "dist/inline.js",
+      file: "docs/inline.js",
       format: "es"
     },
     plugins: [
